@@ -13,15 +13,14 @@ public class Turma {
     }
 
     public double getQuantidadeNotas() {
-        double tst = lista.size();
-        return tst;
+        return lista.size();
 
     }
 
     public double getMediaDasNotas() {
         Double notas = 0.0;
         ListIterator<Double> listIterator = lista.listIterator();
-
+      
         while (listIterator.hasNext()) {
             notas += listIterator.next();
             
@@ -32,14 +31,11 @@ public class Turma {
     public int getQuantidadeNotasMeioresQueAMedia() {
         int i = 0;
         ListIterator<Double> listIterator = lista.listIterator();
-
         while (listIterator.hasNext()) {
             if(listIterator.next()>getMediaDasNotas()){
                 i++;
             }
-            
-        }
-        
+        }    
         return i;
     }
 }
